@@ -1,0 +1,134 @@
+// Note that you must replace the image path to an existing image to display it.
+
+{
+     "logo": {
+         "type": "kitty",
+         "source": "~/.config/fastfetch/image2GOLDwhitewide.png",
+         "width": 65,
+         "height": 23
+     },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+
+        {
+            "type": "title",
+            "key": " PC",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├󰍛 CPU",
+           // "showPeCoreCount": true,
+            "format": "{1}",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛 GPU",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛 GPU Driver",
+            "format": "{3}",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰍛 Memory",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "memory",
+            "key": "└ └ Boot Storage", // Icon for disk, making it the last item
+            "keyColor": "cyan",
+            "mountpoint": "/",          // <--- Crucial: Filters to only show the root filesystem
+            "format": "Samsung 980 250GB NVMe" // Example format: 100GB / 200GB (50%)
+        },
+
+        "break",
+
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├ Kernel",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": "│ ├ Terminal",  // Icon for terminal
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "│ ├ Shell",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖 Packages",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "command",
+            "key": "│ ├ OS Age",
+            "keyColor": "yellow",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "uptime",
+            "key": "└ └ Uptime",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "de",
+            "key": " DE",
+            "keyColor": "#ff5f00"
+        },
+        {
+            "type": "lm",
+            "key": "│ ├ LM",
+            "keyColor": "#ff5f00"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├ WM",
+            "keyColor": "#ff5f00"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├󰉼 Theme",
+            "keyColor": "#ff5f00"
+        },
+        {
+            "type": "icons",
+            "key": "│ ├󰿅 Icons",      // Icon for icons
+            "keyColor": "#ff5f00",
+            "format": "Slot-Dark-Icons"
+        },
+        {
+            "type": "cursor",
+            "key": "│ ├󰡰 Cursor",    // Icon for cursor
+            "keyColor": "#ff5f00"
+        },
+        {
+            "type": "theme",          // This module reports GTK, Qt, and Plasma themes
+            "key": "└ └󰉼 Desktop Theme", // Icon for theme, using "Desktop Theme" as label
+            "keyColor": "#ff5f00",
+            "format": "Breeze (Sweet-Dark-v40)"
+        },
+        {
+            "type": "custom",
+            "format": "               \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
+        },
+        "break",
+    ]
+}
